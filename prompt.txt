@@ -1,0 +1,18 @@
+나는 개발자야. 우리 회사는 보안때문에 Proxy를 쓰고 있어. 그러다보니 새로운 툴을 설치할때 설정때문에 고생을 많이하고 있어.
+
+이런 불편함을 줄여주기 위해서 Proxy Setting을 자동 혹은 도와주는 툴을 개발하고 싶어. 툴이름은 autoproxy야.
+
+대략 아이디어는 설정파일 하나를 만들고, 그 설정 파일에 다음과 같은 정보를 입력하는 거지. 설정파일은 yml 형식으로 하자.
+
+1. Proxy, No Proxy 기본 정보
+    - Proxy의 httpp, https 정보
+    - No Proxy 정보
+
+2. 각 Application별 Proxy 설정 파일 정보
+  예) git
+  App :  git
+     version : 2.43.0.windows.1
+     config
+         location : ~/.gitconfig
+
+3. 위의 autoproxy config 파일에서 정보를 읽어 각 App별 config를 자동으로 설정해주는 python app을 만들어줘. 먼저 git application을 가지고 테스트 해보자.
