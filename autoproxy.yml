@@ -1,0 +1,10 @@
+proxy:
+  http: "http://proxy.example.com:8080"
+  https: "http://proxy.example.com:8080"
+  no_proxy: ".example.com,.internal.com"
+
+applications:
+  git:
+    version: "2.43.0.windows.1"
+    config:
+      location: "~/.gitconfig"
